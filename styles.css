@@ -58,7 +58,7 @@
         }
 
         .loading-bar {
-            width: 200px;
+            width: 400px;
             height: 4px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 4px;
@@ -714,31 +714,6 @@
             font-size: 0.9rem;
         }
 
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-            gap: 15px;
-        }
-
-        .testimonial-nav-item {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.2);
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .testimonial-nav-item:hover {
-            background-color: rgba(255, 51, 51, 0.5);
-        }
-
-        .testimonial-nav-item.active {
-            background-color: var(--red);
-            transform: scale(1.2);
-        }
-
         /* CTA Section */
         .cta {
             padding: 120px 40px;
@@ -795,6 +770,7 @@
         }
 
         .cta-buttons {
+            position: relative;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.8s, transform 0.8s;
@@ -802,6 +778,8 @@
         }
 
         .cta-buttons.visible {
+            display: block;
+            margin: 0 auto;
             opacity: 1;
             transform: translateY(0);
         }
@@ -912,44 +890,7 @@
             transform: translateX(5px);
         }
 
-        .footer-newsletter {
-            flex: 2;
-            min-width: 300px;
-        }
-
-        .newsletter-form {
-            display: flex;
-            margin-top: 20px;
-        }
-
-        .newsletter-input {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            background-color: rgba(255, 255, 255, 0.05);
-            color: var(--white);
-            border-radius: 4px 0 0 4px;
-            font-family: 'General Sans', sans-serif;
-        }
-
-        .newsletter-input:focus {
-            outline: none;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .newsletter-btn {
-            padding: 0 20px;
-            background-color: var(--red);
-            color: var(--white);
-            border: none;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .newsletter-btn:hover {
-            background-color: var(--light-red);
-        }
+        
 
         .footer-bottom {
             padding-top: 40px;
