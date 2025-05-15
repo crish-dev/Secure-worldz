@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Worldz | Cybersecurity Solutions</title>
+    <title>Secure Worldz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -27,6 +27,7 @@
     <header>
         <div class="logo">
             <div class="logo-text">Secure<span>Worldz</span></div>
+            <link rel="icon" href="Images/Secure_Worldz.jpg" type="image/jpg">
         </div>
         <nav>
             <ul>
@@ -109,7 +110,7 @@
                 <p class="about-description">We believe that robust security should be accessible to every organization. Our mission is to create a safer digital environment through innovative security solutions, proactive threat detection, and responsive support.</p>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <div class="stat-number">500+</div>
+                        <div class="stat-number">5+</div>
                         <div class="stat-label">Clients Protected</div>
                     </div>
                     <div class="stat-item">
@@ -173,11 +174,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-nav">
-                    <div class="testimonial-nav-item active"></div>
-                    <div class="testimonial-nav-item"></div>
-                    <div class="testimonial-nav-item"></div>
-                </div>
             </div>
         </div>
     </section>
@@ -228,32 +224,6 @@
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
-                </div>
-                <div class="footer-links">
-                    <h3 class="footer-heading">Support</h3>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h3 class="footer-heading">Stay Updated</h3>
-                    <p>Subscribe to our newsletter for the latest security insights and updates.</p>
-                    <div class="newsletter-form">
-                        <input type="email" class="newsletter-input" placeholder="Your email address">
-                        <button type="submit" class="newsletter-btn">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="copyright">&copy; 2025 Secure Worldz. All rights reserved.</div>
-                <div class="footer-nav">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                    <a href="#">Sitemap</a>
                 </div>
             </div>
         </div>
@@ -399,43 +369,6 @@
         document.querySelectorAll('.section-title, .section-subtitle, .service-card, .about-title, .about-description, .about-stats, .about-image, .testimonial-item, .cta-title, .cta-description, .cta-buttons').forEach(elem => {
             observer.observe(elem);
         });
-
-        // Testimonial Slider
-        const testimonialSlider = (() => {
-            const testimonials = document.querySelectorAll('.testimonial-item');
-            const navItems = document.querySelectorAll('.testimonial-nav-item');
-            let currentIndex = 0;
-
-            function showTestimonial(index) {
-                testimonials.forEach(item => {
-                    item.classList.remove('visible');
-                });
-                navItems.forEach(item => {
-                    item.classList.remove('active');
-                });
-
-                testimonials[index].classList.add('visible');
-                navItems[index].classList.add('active');
-                currentIndex = index;
-            }
-
-            // Initialize navigation items
-            navItems.forEach((item, index) => {
-                item.addEventListener('click', () => {
-                    showTestimonial(index);
-                });
-            });
-
-            // Automatic slider
-            setInterval(() => {
-                const nextIndex = (currentIndex + 1) % testimonials.length;
-                showTestimonial(nextIndex);
-            }, 5000);
-
-            return {
-                showTestimonial
-            };
-        })();
 
         // Smooth Scrolling for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
